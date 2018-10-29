@@ -1,4 +1,4 @@
-def call(Map pipelineParams) {
+def call(Map Deploy) {
 pipeline {
     agent any
     stages {
