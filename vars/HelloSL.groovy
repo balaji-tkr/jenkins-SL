@@ -1,5 +1,16 @@
 #!/usr/bin/env groovy
 
-def call(String name = 'shared-Library') {
-  echo "Jenkins, ${name}."
+def call(deploy) {
+  pipeline {
+    agent any
+    stages {
+        stage('Build') { 
+            steps {
+             sh  'mvn clean install'
+                
+            }
+        }
+    }
+ }
+
 }
